@@ -1,0 +1,6 @@
+The `packages.js` file contains a set of configuration entries
+that the [package] module checks for to know how to load common
+packages. The `build` tool in `package` also knows about this
+and will fetch it when you run `build cache`.
+
+[package]: https://github.com/srikumarks/package
