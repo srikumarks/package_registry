@@ -1,6 +1,9 @@
 The `packages.js` file contains a set of configuration entries
 that the [package] module checks for to know how to load common
-packages. The `build` tool in `package` also knows about this
-and will fetch it when you run `build cache`.
+packages. The `configure` tool in `package` also knows about this
+and will include the registry when you use the `-r` or `--registry`
+flag.
+
+Pull requests with configs for other packages are welcome.
 
 [package]: https://github.com/srikumarks/package
