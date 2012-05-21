@@ -31,3 +31,7 @@ package.config({
     }}
 });
 
+// See https://github.com/srikumarks/IO.js for info about this package.
+package.config({
+    'com.nishabdam.IO': { url: 'https://raw.github.com/srikumarks/IO.js/master/IO.js' }
+});
