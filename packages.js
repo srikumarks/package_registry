@@ -38,5 +38,5 @@ package.config({
 
 // See https://github.com/srikumarks/FD.js for info about FD.js
 package.config({
-    'com.nishabdam.IO': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
+    'com.nishabdam.FD': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
 });
