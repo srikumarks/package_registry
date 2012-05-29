@@ -67,9 +67,9 @@ package.config({
 // anclab stuff (http://anclab.org)
 package.config({
     'com.anclab.steller.scheduler': { 
-        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'; 
+        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'
     },
     'com.anclab.steller.timer': { 
-        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'; 
+        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'
     }
 });
