@@ -63,3 +63,13 @@ package.config({
 package.config({
     'com.nishabdam.FD': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
 });
+
+// anclab stuff (http://anclab.org)
+package.config({
+    'com.anclab.steller.scheduler': { 
+        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'; 
+    },
+    'com.anclab.steller.timer': { 
+        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'; 
+    }
+});
