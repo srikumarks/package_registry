@@ -51,6 +51,12 @@ package.config({
         , url: 'http://mootools.net/download/get/mootools-core-1.4.5-full-nocompat.js'
         , dependsOn: []
         , depNames: []
+    }},
+
+    'Kinetic': { external: { name: 'Kinetic'
+        , url: 'http://www.kineticjs.com/download/kinetic-v3.9.8.js'
+        , dependsOn: []
+        , depNames: []
     }}
 });
 
