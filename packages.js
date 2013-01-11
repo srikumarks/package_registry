@@ -62,12 +62,12 @@ package.config({
 
 // See https://github.com/srikumarks/IO.js for info about this package.
 package.config({
-    'com.nishabdam.IO': { url: 'https://raw.github.com/srikumarks/IO.js/master/IO.js' }
+    'org.sriku.IO': { url: 'https://raw.github.com/srikumarks/IO.js/master/IO.js' }
 });
 
 // See https://github.com/srikumarks/FD.js for info about FD.js
 package.config({
-    'com.nishabdam.FD': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
+    'org.sriku.FD': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
 });
 
 // anclab stuff (http://anclab.org)
