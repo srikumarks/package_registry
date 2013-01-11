@@ -72,10 +72,10 @@ package.config({
 
 // anclab stuff (http://anclab.org)
 package.config({
-    'com.anclab.steller.scheduler': { 
-        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'
-    },
-    'com.anclab.steller.timer': { 
-        url: 'http://nishabdam.com:8080/steller/doc/api_sketch/scheduler.js'
-    }
+    'org.anclab.steller': { external: { name: 'org.anclab.steller'
+        , url:  ['http://sriku.org/demos/lib/steller/steller.js'
+                , 'http://sriku.org/demos/lib/steller/models.js']
+        , dependsOn: []
+        , depNames: []
+    }}
 });
