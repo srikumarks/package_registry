@@ -60,21 +60,40 @@ package.config({
     }}
 });
 
-// See https://github.com/srikumarks/IO.js for info about this package.
+// Add my general public facing libraries. I should be putting
+// public module code in src/ directories of the repos.
 package.config({
-    'org.sriku.IO': { url: 'https://raw.github.com/srikumarks/IO.js/master/IO.js' }
-});
+    'org.sriku.*': function (components) {
+        if (components.length < 1) {
+            console.error("You didn't specify any library.");
+            return undefined;
+        }
 
-// See https://github.com/srikumarks/FD.js for info about FD.js
-package.config({
-    'org.sriku.FD': { url: 'https://raw.github.com/srikumarks/FD.js/package/fd.js' }
+        var path = (components[0] 
+            + '/src/'
+            + ((components.length === 1) ? components[0] : components.slice(1).join('/'))
+            + '.js'
+            );
+
+        return {
+            url: ('http://sriku.org/lib/' + path)
+        };
+    },
+    'org.sriku.IO': { url: 'http://sriku.org/lib/IO/src/IO.js' },
+    'org.sriku.FD': { url: 'http://sriku.org/lib/FD/fd.js' },
+    'org.sriku.steller': { external: { name: 'org.sriku.steller'
+        , url: [ 'http://sriku.org/lib/steller/steller.js'
+               , 'http://sriku.org/lib/steller/models.js' ]
+        , dependsOn: []
+        , depNames: []
+    }}
 });
 
 // anclab stuff (http://anclab.org)
 package.config({
     'org.anclab.steller': { external: { name: 'org.anclab.steller'
-        , url:  ['http://sriku.org/demos/lib/steller/steller.js'
-                , 'http://sriku.org/demos/lib/steller/models.js']
+        , url:  ['http://sriku.org/lib/steller/steller.js'
+                , 'http://sriku.org/lib/steller/models.js']
         , dependsOn: []
         , depNames: []
     }}
