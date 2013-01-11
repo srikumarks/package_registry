@@ -60,8 +60,12 @@ package.config({
     }}
 });
 
-// Add my general public facing libraries. I should be putting
+// Adding my general public facing libraries. I should be putting
 // public module code in src/ directories of the repos.
+// If no special config is found, org.sriku.elephant should map
+// to 'http://sriku.org/lib/elephant/src/elephant.js' 
+// and org.sriku.deer.parts.horn should map to 
+// 'http://sriku.org/lib/deer/src/parts/horn.js'.
 package.config({
     'org.sriku.*': function (components) {
         if (components.length < 1) {
@@ -79,11 +83,13 @@ package.config({
             url: ('http://sriku.org/lib/' + path)
         };
     },
-    'org.sriku.IO': { url: 'http://sriku.org/lib/IO/src/IO.js' },
-    'org.sriku.FD': { url: 'http://sriku.org/lib/FD/fd.js' },
-    'org.sriku.steller': { external: { name: 'org.sriku.steller'
-        , url: [ 'http://sriku.org/lib/steller/steller.js'
-               , 'http://sriku.org/lib/steller/models.js' ]
+    'org.sriku.IO': { external: { name: 'IO'
+        , url: 'http://sriku.org/lib/IO/src/IO.js' 
+        , dependsOn: []
+        , depNames: []
+    }},
+    'org.sriku.FD': { external: { name: 'FD'
+        , url: 'http://sriku.org/lib/FD/fd.js'
         , dependsOn: []
         , depNames: []
     }}
@@ -92,7 +98,7 @@ package.config({
 // anclab stuff (http://anclab.org)
 package.config({
     'org.anclab.steller': { external: { name: 'org.anclab.steller'
-        , url:  ['http://sriku.org/lib/steller/steller.js'
+        , url:  [ 'http://sriku.org/lib/steller/steller.js'
                 , 'http://sriku.org/lib/steller/models.js']
         , dependsOn: []
         , depNames: []
